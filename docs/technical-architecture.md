@@ -139,38 +139,38 @@ graph LR
 
 ## 3. State Management Architecture
 
-### 3.1 Context Structure
+### 3.1 Context Structure 
 
 ```mermaid
-graph TB
-    subgraph "AuthContext"
-        A[user: User | null]
-        B[isAuthenticated: boolean]
-        C[login: function]
-        D[logout: function]
+  graph TB
+    subgraph AuthContext
+        A[user - User or null]
+        B[isAuthenticated - boolean]
+        C[login function]
+        D[logout function]
     end
     
-    subgraph "AppContext"
-        E[sidebarOpen: boolean]
-        F[projects: Project[]]
-        G[users: User[]]
-        H[documents: Document[]]
-        I[toggleSidebar: function]
-        J[addProject: function]
-        K[addUser: function]
-        L[updateUser: function]
-        M[addDocument: function]
+    subgraph AppContext
+        E[sidebarOpen - boolean]
+        F[projects - Project list]
+        G[users - User list]
+        H[documents - Document list]
+        I[toggleSidebar function]
+        J[addProject function]
+        K[addUser function]
+        L[updateUser function]
+        M[addDocument function]
     end
     
-    subgraph "ThemeContext"
-        N[theme: string]
-        O[setTheme: function]
+    subgraph ThemeContext
+        N[theme - string]
+        O[setTheme function]
     end
     
-    subgraph "React Query"
-        P[serverState: any]
-        Q[mutations: any]
-        R[cache: any]
+    subgraph React Query
+        P[serverState]
+        Q[mutations]
+        R[cache]
     end
 ```
 
@@ -372,12 +372,12 @@ graph LR
 ```mermaid
 graph TD
     A[BrowserRouter] --> B[Routes]
-    B --> C[Route: "/"]
-    B --> D[Route: "/services"]
-    B --> E[Route: "/about"]
-    B --> F[Route: "/contact"]
-    B --> G[Route: "/payment"]
-    B --> H[Route: "*"]
+    B --> C[Route /]
+    B --> D[Route /services]
+    B --> E[Route /about]
+    B --> F[Route /contact]
+    B --> G[Route /payment]
+    B --> H[Route *]
     
     C --> I[Index Component]
     I --> J[Landing Component]
@@ -388,19 +388,20 @@ graph TD
     L --> N[Sidebar]
     L --> O[Main Content]
     
-    O --> P[/dashboard]
-    O --> Q[/projects]
-    O --> R[/create-project]
-    O --> S[/marketplace]
-    O --> T[/analytics]
-    O --> U[/site-update]
-    O --> V[/site-verification]
-    O --> W[/user-management]
-    O --> X[/company-profile]
-    O --> Y[/account-settings]
-    O --> Z[/my-profile]
-    O --> AA[/integrations]
-    O --> BB[/upload-documents]
+    O --> P[Dashboard]
+    O --> Q[Projects]
+    O --> R[Create Project]
+    O --> S[Marketplace]
+    O --> T[Analytics]
+    O --> U[Site Update]
+    O --> V[Site Verification]
+    O --> W[User Management]
+    O --> X[Company Profile]
+    O --> Y[Account Settings]
+    O --> Z[My Profile]
+    O --> AA[Integrations]
+    O --> BB[Upload Documents]
+
 ```
 
 ### 6.2 Navigation Flow
