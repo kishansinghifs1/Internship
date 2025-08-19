@@ -1,0 +1,29 @@
+### Health
+GET http://localhost:3000/v1/health
+
+### Login
+POST http://localhost:3000/v1/auth/login
+Content-Type: application/json
+
+{
+  "email": "demo@constructionfirm.com",
+  "password": "demo123"
+}
+
+### Me
+GET http://localhost:3000/v1/users/me
+Authorization: Bearer {{accessToken}}
+
+### List Projects
+GET http://localhost:3000/v1/projects?status=on_track
+Authorization: Bearer {{accessToken}}
+
+### Create Project
+POST http://localhost:3000/v1/projects
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+{
+  "name": "Mall Renovation",
+  "budget": 12500000
+}

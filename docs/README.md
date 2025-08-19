@@ -299,6 +299,10 @@ src/
 - **API Reference**: [API Documentation](./api-reference.md)
 - **Component Library**: [Component Documentation](./components.md)
 
+### Backend Documentation
+
+- For the Express backend service, see: [Backend Docs](./backend/README.md)
+
 ### Development Support
 - **Issues**: GitHub Issues
 - **Discussions**: GitHub Discussions
