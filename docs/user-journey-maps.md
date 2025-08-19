@@ -114,7 +114,7 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    A[Dashboard] --> B[Click "New Project"]
+    A[Dashboard] --> B[Click New Project]
     B --> C[Project Creation Form]
     C --> D[Enter Project Details]
     D --> E[Project Name]
@@ -125,7 +125,7 @@ flowchart TD
     I --> J[Budget]
     J --> K[Team Members]
     K --> L[Submit Form]
-    L --> M[Create Project]
+    L --> M[Create Project in Backend]
     M --> N[Show Success Message]
     N --> O[Redirect to Project List]
     O --> P[Project Appears in List]
